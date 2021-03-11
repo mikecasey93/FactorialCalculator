@@ -26,15 +26,26 @@ class ViewController: UIViewController {
     
     @IBAction func calculateButton(_ sender: UIButton) {
         
-            var answer: Int = 1
-        
+        var answer: Int = 1
+            
+        if numberInput == 0 {
+            answer = 1
+        }
+        else {
             for number in 1...numberInput {
                 
                 answer *= number
             }
-        
-            numberDispaly.text = String(answer)
         }
+        numberDispaly.text = String(answer)
+        
+    }
+    
+    @IBAction func resetButton(_ sender: UIButton) {
+        
+        numberDispaly.text = ""
+    }
+    
         
     }
     
